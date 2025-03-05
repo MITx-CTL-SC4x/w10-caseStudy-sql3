@@ -30,8 +30,8 @@ PHASES = {
         "type": "text_area",
         "height": 200,
         "label": """What product category has the highest average number of items in an order where the delivery was late for customers in either 'rio de janeiro' or 'sao paulo'?""",
-        "instructions": """ For this question, the students where asked to write a query to find the product category that has the highest average number of items in an order (average of order_item_id) where the delivery was late (late_delivery=1) for customers in either 'rio de janeiro' or 'sao paulo'. The correct SQL query for this question:
-    SELECT Products.product_category_name, AVG(OrderItems.order_item_id)
+        "instructions": """ For this question, the students where asked to write a query to find the product category that has the highest average number of items in an order (average of item_qty) where the delivery was late (late_delivery=1) for customers in either 'rio de janeiro' or 'sao paulo'. The correct SQL query for this question:
+    SELECT Products.product_category_name, AVG(OrderItems.item_qty)
     FROM Orders, OrderItems, Customers, Products
     WHERE Orders.order_id = OrderItems.order_id
       AND Customers.customer_id = Orders.customer_id
@@ -39,7 +39,7 @@ PHASES = {
       AND Orders.late_delivery = 1
       AND (Customers.customer_city = 'rio de janeiro' OR Customers.customer_city = 'sao paulo')
     GROUP BY Products.product_category_name
-    ORDER BY AVG(OrderItems.order_item_id) DESC;
+    ORDER BY AVG(OrderItems.item_qty) DESC;
 Provide compare the following student submission with the correct answer above. Please provide feedback on the student submission if their solution is not correct. Do not provide the correct answer. Instead, provide guidance to help the student identify where they might be missing something in their code. There might be slight variations to the query that will give the correct answer. """,
         "value": " ",
         "scored_phase": False,
@@ -52,8 +52,8 @@ Provide compare the following student submission with the correct answer above. 
         "type": "text_area",
         "height": 200,
         "label": """Do you want to try again?""",
-        "instructions": """ For this question, the students where asked to write a query to find the product category that has the highest average number of items in an order (average of order_item_id) where the delivery was late (late_delivery=1) for customers in either 'rio de janeiro' or 'sao paulo'. The correct SQL query for this question:
-    SELECT Products.product_category_name, AVG(OrderItems.order_item_id)
+        "instructions": """ For this question, the students where asked to write a query to find the product category that has the highest average number of items in an order (average of item_qty) where the delivery was late (late_delivery=1) for customers in either 'rio de janeiro' or 'sao paulo'. The correct SQL query for this question:
+    SELECT Products.product_category_name, AVG(OrderItems.item_qty)
     FROM Orders, OrderItems, Customers, Products
     WHERE Orders.order_id = OrderItems.order_id
       AND Customers.customer_id = Orders.customer_id
@@ -61,7 +61,7 @@ Provide compare the following student submission with the correct answer above. 
       AND Orders.late_delivery = 1
       AND (Customers.customer_city = 'rio de janeiro' OR Customers.customer_city = 'sao paulo')
     GROUP BY Products.product_category_name
-    ORDER BY AVG(OrderItems.order_item_id) DESC;
+    ORDER BY AVG(OrderItems.item_qty) DESC;
 Provide compare the following student submission with the correct answer above. Please provide feedback on the student submission if their solution is not correct. Do not provide the correct answer. Instead, provide guidance to help the student identify where they might be missing something in their code. There might be slight variations to the query that will give the correct answer. """,
         "value": " ",
         "scored_phase": False,
@@ -74,8 +74,8 @@ Provide compare the following student submission with the correct answer above. 
         "type": "text_area",
         "height": 200,
         "label": """Do you want to try one more time?""",
-        "instructions": """ For this question, the students where asked to write a query to find the product category that has the highest average number of items in an order (average of order_item_id) where the delivery was late (late_delivery=1) for customers in either 'rio de janeiro' or 'sao paulo'. The correct SQL query for this question:
-    SELECT Products.product_category_name, AVG(OrderItems.order_item_id)
+        "instructions": """ For this question, the students where asked to write a query to find the product category that has the highest average number of items in an order (average of item_qty) where the delivery was late (late_delivery=1) for customers in either 'rio de janeiro' or 'sao paulo'. The correct SQL query for this question:
+    SELECT Products.product_category_name, AVG(OrderItems.item_qty)
     FROM Orders, OrderItems, Customers, Products
     WHERE Orders.order_id = OrderItems.order_id
       AND Customers.customer_id = Orders.customer_id
@@ -83,7 +83,7 @@ Provide compare the following student submission with the correct answer above. 
       AND Orders.late_delivery = 1
       AND (Customers.customer_city = 'rio de janeiro' OR Customers.customer_city = 'sao paulo')
     GROUP BY Products.product_category_name
-    ORDER BY AVG(OrderItems.order_item_id) DESC;
+    ORDER BY AVG(OrderItems.item_qty) DESC;
 Provide compare the following student submission with the correct answer above. Please provide feedback on the student submission if their solution is not correct. Do not provide the correct answer. Instead, provide guidance to help the student identify where they might be missing something in their code. There might be slight variations to the query that will give the correct answer. """,
         "value": " ",
         "scored_phase": False,
