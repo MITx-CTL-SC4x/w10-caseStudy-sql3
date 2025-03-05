@@ -1,7 +1,7 @@
 # SC4x | Week 10 | Case Study | SQL 3
 
 ## Overview
-The app evaluates and provides feedback on a single SQL query using an AI API (OpenAI, Gemini, or Claude).
+The app uses an AI API (OpenAI, Gemini, or Claude) to evaluate and provide feedback on a SQL query to find the product category that has the highest average number of items in an order where the delivery was late for customers in either 'rio de janeiro' or 'sao paulo'.
 
 ## Prerequisites
 - Python 3.6 or later
