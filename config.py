@@ -29,7 +29,7 @@ PHASES = {
     "attempt1": {
         "type": "text_area",
         "height": 200,
-        "label": """What product category has the highest average number of items in an order where the delivery was late for customers in either 'rio de janeiro' or 'sao paulo'?""",
+        "label": """Write a query to find the product category that has the highest average number of items in an order where the delivery was late for customers in either 'rio de janeiro' or 'sao paulo'?""",
         "instructions": """ For this question, the students where asked to write a query to find the product category that has the highest average number of items in an order (average of item_qty) where the delivery was late (late_delivery=1) for customers in either 'rio de janeiro' or 'sao paulo'. The correct SQL query for this question:
     SELECT Products.product_category_name, AVG(OrderItems.item_qty)
     FROM Orders, OrderItems, Customers, Products
